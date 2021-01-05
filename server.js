@@ -8,7 +8,7 @@ const path = require('path')
 const app = express()
 app.use(bodyParser.json());
 
-app.use('/images', express.static(path.join(__dirname, './assets')));
+app.use('/images', express.static(path.join(__dirname, '../dist/img')));
 //here we are configuring dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
 
